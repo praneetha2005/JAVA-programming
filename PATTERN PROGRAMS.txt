@@ -1,0 +1,220 @@
+1.LEFT HALF PYRAMID:
+import java.util.Scanner;
+
+class HalfPyramid {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the height of the pyramid: ");
+        int height = scanner.nextInt();
+
+        for (int i = 1; i <= height; i++) {
+            System.out.println(" ".repeat(height - i) + "*".repeat(i));
+        }
+
+        scanner.close();
+    }
+}
+
+
+2.PASCAL'S TRIANGLE:
+import java.util.Scanner;
+
+class PascalsTriangle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows for Pascal's Triangle: ");
+        int rows = scanner.nextInt();
+
+        for (int i = 0; i < rows; i++) {
+            for (int k = 0; k < rows - i; k++) System.out.print(" ");
+            int num = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(num + " ");
+                num = num * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
+
+3.RECTANGLE SYMBOLE PATTERN:
+import java.util.Scanner;
+
+class RectanglePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the symbol: ");
+        String symbol = scanner.next();
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int columns = scanner.nextInt();
+
+        for (int i = 0; i < rows; i++)
+            System.out.println(symbol.repeat(columns));
+
+        scanner.close();
+    }
+}
+
+4.PATTERN:
+1
+11
+111
+11
+1
+import java.util.Scanner;
+
+class NumberPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter the number to be printed: ");
+        int numToPrint = scanner.nextInt();
+        System.out.print("Max Number of times printed: ");
+        int maxPrint = scanner.nextInt();
+
+        // Print the pattern
+        for (int i = 1; i <= maxPrint * 2 - 1; i++) {
+            int timesToPrint = i <= maxPrint ? i : maxPrint * 2 - i;
+            for (int j = 0; j < timesToPrint; j++) {
+                System.out.print(numToPrint);
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+5.INVERTED FULL PYRAMID:
+import java.util.Scanner;
+
+class InvertedFullPyramid {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the height of the inverted pyramid: ");
+        int height = scanner.nextInt();
+
+        for (int i = height; i >= 1; i--) {
+            System.out.println(" ".repeat(height - i) + "*".repeat(2 * i - 1));
+        }
+
+        scanner.close();
+    }
+}
+
+6.SAME AS 4TH QUESTION USING "%"
+
+7.PATTERN
+1
+2 2
+3 3 3 
+4 4 4 4
+import java.util.Scanner;
+
+class NumberPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        // Print the pattern
+        for (int i = 1; i <= rows; i++)
+            System.out.println((i + " ").repeat(i));
+
+        scanner.close();
+    }
+}
+
+8.PATTERN
+1
+4 9
+16 25 36
+49 64 81 100
+import java.util.Scanner;
+
+class SquarePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        // Print the pattern
+        int num = 1;
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num * num + " ");
+                num++;
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+9.PATTERN
+1
+2 2
+3 3 3 
+4 4 4 4
+3 3 3
+2 2
+1
+import java.util.Scanner;
+
+class NumberPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        // Print the pattern
+        for (int i = 1; i <= rows * 2 - 1; i++) {
+            int num = i <= rows ? i : rows * 2 - i;
+            for (int j = 1; j <= num; j++) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+10. HOLLOW SQUARE DOLLAR PATTERN:
+import java.util.Scanner;
+
+class HollowSquarePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter the size of the square: ");
+        int size = scanner.nextInt();
+
+        // Print the hollow square pattern
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
+                System.out.print((i == 1 || i == size || j == 1 || j == size) ? "$" : " ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+11. SAME AS 5TH QUESTION:
+INVERTED PYRAMID PATTERN.
+
+
